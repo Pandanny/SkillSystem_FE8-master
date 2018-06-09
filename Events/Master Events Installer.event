@@ -1,0 +1,53 @@
+//World Map Events Installer
+// #define WorldMapIntroPointerTable(id,offset) "PUSH; ORG 0x8B3ad8+(4*id); POIN offset; POP"
+ALIGN 4
+{
+  #include "00  1-1_ A Forced Hand_Event_0x9E863C.event"
+}
+ALIGN 4
+{
+  #include "01 Ch1 1-2_ Perspectives_Event_0x9E879C.event"
+}
+ALIGN 4
+{
+  #include "02 Ch2 1-3_ Brothers_Event_0x9E8934.event"
+}
+ALIGN 4
+{
+  #include "03 Ch3 1-4_ Port Irene_Event_0x9E8A38.event"
+}
+ALIGN 4
+{
+  #include "04 Ch4 1-5_ Law of the Land_Event_0x9E8B20.event"
+}
+ALIGN 4
+{
+  #include "05 Ch5 1-6_ To Be A Hero_Event_0x9E8D0C.event"
+}
+ALIGN 4
+{
+  #include "06 Ch5x 1-7_ Graveyard Shift_Event_0x9E8C54.event"
+}
+ALIGN 4
+{
+  #include "07 Ch6 1-8_ The Jailer_s Malice_Event_0x9E8DC4.event"
+}
+ALIGN 4
+{
+  #include "08 Ch7 1-9_ Thunder_s Call_Event_0x9E8E70.event"
+}
+ALIGN 4
+{
+  #include "09 Ch8 1-10_ Back To Basics_Event_0x9E8FE4.event"
+}
+ALIGN 4
+{
+  #include "0A Ch9 1-11_ Loyal To The End_Event_0x9E9140.event"
+}
+ALIGN 4
+{
+  #include "0B Ch10 1-E_ I Never Wanted This_Event_0x9E92B0.event"
+}
+
+
+ALIGN 4

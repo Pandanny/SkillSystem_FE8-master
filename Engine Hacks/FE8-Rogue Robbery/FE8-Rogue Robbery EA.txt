@@ -1,0 +1,45 @@
+//FE8 Rogue Steal
+//By Tequila
+
+#include EAstdlib.event
+#include "Extensions/Hack Installation.txt"
+
+#ifdef _FE8_
+	#define Free_Space 0xB2B400
+	#define Item_Table 0x809B10
+	#define Current_Char_Pointer 0x03004E50
+	#define Enemy_Char 0x203A958
+	#define Get_Enemy_Data 0x19431
+	#define Get_Equipped_Item 0x16B29
+	
+	ORG $17054
+	jumpToHack(Free_Space)
+	
+	ORG $2432E //change ldrh to mov r1,r4; puts slot*2 in r1 and item offset in r0
+	BYTE 0x21 0x1C
+	
+	ORG $24366 //don't really need to change here, except nop out the mov r0,r4, because slot*2 is already in r1
+	BYTE 0xC0 0x46
+	
+	ORG $25BC6 //mov r0,r4 instead of ldr, lsl r1,r6,#0x1 then nop
+	BYTE 0x20 0x1C 0x71 0x00 0xC0 0x46
+	
+	ORG $34DA4 //mov r0,r1 instead of r6, mov r1,10, lsl r1,r1,#0x1, bl function, mov r4,r0
+	BYTE 0x08 0x1C 0x51 0x46 0x49 0x00
+	BL(0x17054)
+	BYTE 0x04 0x1C
+	
+	ORG $16B3E //Makes equipment getter also return slot*2 in r2
+	BYTE 0x01 0x28 0x01 0xD1 0x20 0x88 0x04 0xE0 0x01 0x35 0x04 0x2D 0xF0 0xDD 0x00 0x20 0x00 0xE0 0x6A 0x00 
+	
+	ORG Free_Space
+	#incbin "FE8-Rogue Robbery.dmp"
+	POIN Item_Table
+	WORD Current_Char_Pointer
+	POIN Get_Equipped_Item
+	
+	MESSAGE "Ends at CURRENTOFFSET"
+	
+#else
+	ERROR "You're not assembling FE8 events!"
+#endif

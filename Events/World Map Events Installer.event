@@ -1,0 +1,14 @@
+//World Map Events Installer
+// #define WorldMapIntroPointerTable(id,offset) "PUSH; ORG 0x8B3ad8+(4*id); POIN offset; POP"
+
+{
+  #define PrologueWMEventsID 0x1
+  ALIGN 4
+  #include "00  1-1_ A Forced Hand_WorldMap_0xA39768.event"
+}
+{
+  ALIGN 4
+  #include "00  1-1_ A Forced Hand_WorldMapSelect_0xA39D00.event"
+}
+ALIGN 4
+// #include "EpilogueEvents.event"

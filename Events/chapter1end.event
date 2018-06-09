@@ -1,0 +1,28 @@
+
+//////////////////////////////////////////////////////////////////////
+//                                                                  //
+// Disassembled with Nintenlord's Event Assembler                   //
+// Version: 11.1.0.0                                                //
+// Game: FE8                                                        //
+// File: Vision Quest v03.backup.20180603083011.event_assembler.gba //
+// Offset: $9EF164                                                  //
+//                                                                  //
+//////////////////////////////////////////////////////////////////////
+
+
+
+ORG $9EF164
+CHECK_EVENTID 0x3
+MUSC 0x1D
+SVAL 0x2 0x20
+CALL 0x9EE2E8
+TEXTSTART
+TEXTSHOW 0xD58
+TEXTEND
+REMA
+REMA
+CLEAN
+STAL 5
+MNC2 0x1
+ENDA
+

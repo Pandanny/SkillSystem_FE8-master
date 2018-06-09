@@ -1,0 +1,21 @@
+
+////////////////////////////////////////////////////
+//                                                //
+// Disassembled with Nintenlord's Event Assembler //
+// Version: 11.1.0.0                              //
+// Game: FE8                                      //
+// File: Storch v03.event_assembler.gba           //
+// Offset: $A39D00                                //
+//                                                //
+////////////////////////////////////////////////////
+
+
+
+ORG $A39D00
+EVBIT_MODIFY 0x1
+ENUT 0x89
+ENDA
+
+//The next line is to ensure that new events do not overwrite other data.
+//Do not delete unless you are SURE you know what you are doing!
+ASSERT $A39D0C - currentOffset
